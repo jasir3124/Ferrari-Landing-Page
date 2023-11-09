@@ -1,0 +1,11 @@
+.heroSection{
+    background-image: url(images/ferrariBackgroun.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+nav{
+    padding: 10px;
+}
+nav h1 {
+    letter-spacing: 7px;
+}
