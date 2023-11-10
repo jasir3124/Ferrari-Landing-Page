@@ -11,9 +11,9 @@ nav {
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: rgba(0, 0, 0, 0.7);
-  box-shadow: -3px 20px 20px 7px rgba(0,0,0,0.7);
-  -webkit-box-shadow: -3px 20px 20px 7px rgba(0,0,0,0.7);
-  -moz-box-shadow: -3px 20px 20px 7px rgba(0,0,0,0.7);
+  box-shadow: -3px 20px 20px 7px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -3px 20px 20px 7px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -3px 20px 20px 7px rgba(0, 0, 0, 0.7);
 }
 nav h1 {
   letter-spacing: 5px;
@@ -21,44 +21,92 @@ nav h1 {
 .ferrariLogo {
   position: relative;
   left: 50%;
-  top: 20%;
+  top: 15%;
   width: fit-content;
   transform: translate(-50%);
+  margin-bottom: 30px;
 }
-.ferrariLogo h1{
-    color: black;
-    font-size: 50px;
+.ferrariLogo h1 {
+  color: black;
+  font-size: 50px;
 }
-#ferrari{
-    padding-left: 7rem;
+#ferrari {
+  padding-left: 7rem;
+  padding-bottom: 3rem;
 }
 .firstSection {
-    display: flex;
+  display: flex;
+}
+.readMoreBtn {
+  --color: red;
+  font-family: inherit;
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  line-height: 2.5em;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid red;
+  transition: color 0.5s;
+  z-index: 1;
+  font-size: 17px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--color);
 }
 
-
-
-@media only screen and (max-width: 1200px){
-    .firstSection > div:nth-child(2) > img {
-        width: 350px;
-        height: 500px;
-        margin-left: 30px;
-    }
+.readMoreBtn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
 }
-@media only screen and (max-width: 1000px){
-    .firstSection > div:nth-child(2) > img {
-        width: 350px;
-        height: 500px;
-        padding-left: 10px;
-    }
+
+.readMoreBtn:hover {
+  color: #fff;
 }
-@media only screen and (max-width: 760px){
-    .firstSection{
-        display: grid;
-        justify-content: center;
-    }
-    .firstSection > div {
-        align-items: center;
-        width: 100% !important;
-    }
+
+.readMoreBtn:before {
+  top: 100%;
+  left: 100%;
+  transition: all 0.7s;
+}
+
+.readMoreBtn:hover:before {
+  top: -30px;
+  left: -30px;
+}
+
+.readMoreBtn:active:before {
+  background: rgb(183, 2, 2);
+  transition: background 0s;
+}
+
+@media only screen and (max-width: 1200px) {
+  .firstSection > div:nth-child(2) > img {
+    width: 350px;
+    height: 500px;
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .firstSection > div:nth-child(2) > img {
+    width: 350px;
+    height: 500px;
+    padding-left: 10px;
+  }
+}
+@media only screen and (max-width: 760px) {
+  .firstSection {
+    display: grid;
+    justify-content: center;
+  }
+  .firstSection > div {
+    align-items: center;
+    width: 100% !important;
+  }
 }
