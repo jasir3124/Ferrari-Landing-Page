@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.css"
     />
     <link rel="stylesheet" href="fa/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -17,10 +17,45 @@
         <div>
           <h1 class="text-light">Ferrari</h1>
         </div>
-        <div class="text-light d-flex justify-content-end pt-3 gap-5">
-          <h5>SPORTS CARS</h5>
-          <h5>COLLECTIONS</h5>
-          <h5>ABOUT US</h5>
+        <div class="d-flex justify-content-end pt-2">
+          <div class="d-flex gap-5 text-light navLinkCont">
+            <a class="link-light link-underline-opacity-0 text-nowrap" href="#">
+              <h5>SPORTS CARS</h5>
+            </a>
+            <a class="link-light link-underline-opacity-0 text-nowrap" href="#">
+              <h5>COLLECTIONS</h5>
+            </a>
+            <a class="link-light link-underline-opacity-0 text-nowrap" href="#">
+              <h5>ABOUT US</h5>
+            </a>
+          </div>
+          <div class="SideBarCont">
+            <button class="sideBarBtnOpen sideBarBtn">
+              <i class="fa-solid fa-bars fa-2x" style="color: #ffffff"></i>
+            </button>
+            <div class="sideBarLinksCont">
+              <div class="d-grid">
+                <button class="sideBarBtnClose sideBarBtn">
+                  <i class="fa-solid fa-x fa-2x mb-4" style="color: #ffffff;"></i>
+                </button>
+                <a
+                  class="link-light link-underline-opacity-0 text-nowrap fs-3 mb-5"
+                  href="#"
+                  >SPORTS CARS</a
+                >
+                <a
+                  class="link-light link-underline-opacity-0 text-nowrap fs-3 mb-5"
+                  href="#"
+                  >COLLECTIONS</a
+                >
+                <a
+                  class="link-light link-underline-opacity-0 text-nowrap fs-3"
+                  href="#"
+                  >ABOUT US</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
       <div class="ferrariLogo">
@@ -68,25 +103,30 @@
       </div>
     </div>
     <div class="firstSection p-5 row m-0 p-0">
-      <div class="col-lg-6 col-md-7 pe-md-5 d-flex align-items-center justify-content-center">
+      <div
+        class="col-lg-6 col-md-7 pe-md-5 d-flex align-items-center justify-content-center"
+      >
         <div>
-          <h1 class="text-uppercase mb-4">ferrari's special livary for <br/> the return to las vegas</h1>
+          <h1 class="text-uppercase mb-4">
+            ferrari's special livary for <br />
+            the return to las vegas
+          </h1>
           <p class="fs-5">
-            Scideria Ferrari and its drivers are all <br> set to sports special colours for Formula <br> 1's long awaited return to Las Vegas in <br> the United States.
+            Scideria Ferrari and its drivers are all <br />
+            set to sports special colours for Formula <br />
+            1's long awaited return to Las Vegas in <br />
+            the United States.
           </p>
           <div class="d-flex justify-content-center mb-5">
-            <button class="readMoreBtn"> Read More</button>
+            <button class="readMoreBtn">Read More</button>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-5 justify-content-center d-grid">
-        <img src="images/ferrari image 1.avif" alt="" />  
+        <img src="images/ferrari image 1.avif" alt="" />
       </div>
     </div>
 
-    <div class="">
-
-    </div>
     <script src="main.js"></script>
   </body>
 </html>

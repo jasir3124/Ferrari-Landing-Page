@@ -82,9 +82,37 @@ nav h1 {
   background: rgb(183, 2, 2);
   transition: background 0s;
 }
-
+.sideBarBtn {
+  all: unset;
+  width: fit-content;
+  height: fit-content;
+}
+.SideBarCont {
+  display: none;
+}
+.sideBarLinksCont {
+  display: none;
+  background-color: #2c0b0e;
+  padding: 30px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 9999;
+  height: 100%;
+  box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
+  -webkit-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
+  -moz-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
+}
 @media screen and (max-width: 1090px) {
-  .firstSection > div:nth-child(2) > img{
+  .firstSection > div:nth-child(2) > img {
     width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .navLinkCont {
+    display: none !important;
+  }
+  .SideBarCont {
+    display: block;
   }
 }
