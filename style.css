@@ -104,6 +104,13 @@ nav h1 {
   -webkit-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
   -moz-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
 }
+.secondSection div{
+  height: 500px;
+}
+
+
+
+
 @media screen and (max-width: 1090px) {
   .firstSection > div:nth-child(2) > img {
     width: 100%;
