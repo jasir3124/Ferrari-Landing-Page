@@ -26,6 +26,7 @@ nav h1 {
   width: fit-content;
   transform: translate(-50%);
   margin-bottom: 30px;
+  display: grid;
 }
 .ferrariLogo h1 {
   color: black;
@@ -34,6 +35,8 @@ nav h1 {
 #ferrari {
   padding-left: 7rem;
   padding-bottom: 3rem;
+  width: 500px;
+  height: 500px;
 }
 .readMoreBtn {
   --color: red;
@@ -108,7 +111,6 @@ nav h1 {
   height: 700px;
 }
 
-
 @media screen and (min-width: 768px) and (max-width: 1020px) {
   .secondSection div{
     height: 600px;
@@ -121,26 +123,84 @@ nav h1 {
   }
 }
 
-@media screen and (min-width: 531px) and (max-width: 705px) {
+@media screen and (min-width: 631px) and (max-width: 705px) {
   .navLinkCont {
     display: none !important;
   }
   .SideBarCont {
     display: block;
   }
-  .heroSection{
-    background-size: contain;
+}
+
+@media screen and (min-width: 531px) and (max-width:630px) {
+  .ferrariLogo h1{
+    font-size: 40px;
+  }
+  #ferrari{
+    width: 400px;
+    height: 400px;
+    padding-left: 4rem;
   }
 }
 
-@media screen and (min-width: 361px) and (max-width: 530px) {
+@media screen and (min-width: 430px) and (max-width: 530px) {
   .secondSection div {
     height: 600px;
+  }
+  .ferrariLogo h1{
+    font-size: 35px;
+    justify-self: center;
+  }
+  #ferrari{
+    width: 400px;
+    height: 400px;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 361px) and (max-width: 430px) {
+  .ferrariLogo h1{
+    font-size: 30px;
+    justify-self: center;
+  }
+  #ferrari{
+    width: 350px;
+    height: 350px;
+    padding-left: 1rem;
   }
 }
 
 @media screen and (max-width: 360px) {
   .secondSection div {
     height: 400px;
+  }
+  .ferrariLogo h1{
+    font-size: 30px;
+    justify-self: center;
+    padding-left: 6rem;
+  }
+  #ferrari{
+    width: 350px;
+    height: 350px;
+    padding-left: 1rem;
+    display: none;
+  }
+  .heroSection{
+    height: 550px;
+  }
+}
+
+@media screen and (max-width: 705px){
+  .navLinkCont {
+    display: none !important;
+  }
+  .SideBarCont {
+    display: block;
+  }
+  .heroSection {
+    background-image: url(images/ferrariBackgroundPhone.jpg);
+  }
+  .ferrariLogo h1{
+    color: white;
   }
 }
