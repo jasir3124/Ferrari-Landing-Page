@@ -110,9 +110,13 @@ nav h1 {
 .secondSection div{
   height: 700px;
 }
-/* .imageCont{
+.imageCont{
   width: 0;
-} */
+  background-color: grey;
+}
+.ferrariImageSection{
+  opacity: 0;
+}
 @media screen and (min-width: 768px) and (max-width: 1020px) {
   .secondSection div{
     height: 600px;

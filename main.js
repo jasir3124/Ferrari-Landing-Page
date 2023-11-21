@@ -1,3 +1,4 @@
+// shows sidebar
 let sideBarBtnOpen = document.querySelector(".sideBarBtnOpen");
 let sideBarBtnClose = document.querySelector(".sideBarBtnClose");
 let body = document.querySelector("body");
@@ -13,6 +14,56 @@ sideBarBtnClose.addEventListener("click", function () {
   body.style.overflow = "visible";
 });
 
+
+
+
+// images if in viewport come from the side of the screen
+let imagesCont = document.querySelectorAll(".imageCont");
+var isAnimating = false;
+
+document.addEventListener("scroll", function () {
+  if (isAnimating) {
+    return
+  }
+  imagesCont.forEach((container) => {
+    let image = container.firstElementChild
+    if (isInViewport(container)) {
+      isAnimating = true;
+      anime({
+        targets: container,
+        delay: 200,
+        width: "100%",
+        easing: "easeInOutQuad",
+        complete: function() {
+          anime({
+            targets: image,
+            delay: 300,
+            opacity: 1,
+            easing: "easeInOutQuad",
+            complete: function() {
+              isAnimating = false;
+            }
+          });
+        },
+      });
+    }
+  });
+});
+
+function isInViewport(container) {
+  const rect = container.getBoundingClientRect();
+
+  return (
+    rect.top <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.left >= 0 &&
+    rect.bottom >= 0 &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+
+// when hover on image it zooms in/out
 let ferrariImage = document.querySelectorAll(".ferrariImageSection");
 
 ferrariImage.forEach((image) => {
@@ -36,33 +87,4 @@ function zoomOut(image) {
     scale: 1,
     easing: "easeInOutQuad",
   });
-}
-
-let imagesCont = document.querySelectorAll(".imageCont");
-
-document.addEventListener("scroll", function () {
-  imagesCont.forEach((container) => {
-    if (isInViewport(container)) {
-      console.log("is in viewport");
-      anime({
-        targets: container,
-        delay: 200,
-        width: "100%",
-      });
-    } else {
-      console.log("is not in viewport");
-    }
-  });
-});
-
-function isInViewport(container) {
-  const rect = container.getBoundingClientRect();
-  
-  
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
 }
