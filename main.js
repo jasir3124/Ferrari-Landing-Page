@@ -19,16 +19,17 @@ sideBarBtnClose.addEventListener("click", function () {
 
 // images if in viewport come from the side of the screen
 let imagesCont = document.querySelectorAll(".imageCont");
-var isAnimating = false;
+var showImageAnimation = false;
 
 document.addEventListener("scroll", function () {
-  if (isAnimating) {
+  if (showImageAnimation) {
     return
   }
   imagesCont.forEach((container) => {
     let image = container.firstElementChild
+    let text = container.lastElementChild
     if (isInViewport(container)) {
-      isAnimating = true;
+      showImageAnimation = true;
       anime({
         targets: container,
         delay: 200,
@@ -36,12 +37,12 @@ document.addEventListener("scroll", function () {
         easing: "easeInOutQuad",
         complete: function() {
           anime({
-            targets: image,
+            targets: [image, text],
             delay: 300,
             opacity: 1,
             easing: "easeInOutQuad",
             complete: function() {
-              isAnimating = false;
+              showImageAnimation = false;
             }
           });
         },
@@ -64,13 +65,14 @@ function isInViewport(container) {
 
 
 // when hover on image it zooms in/out
-let ferrariImage = document.querySelectorAll(".ferrariImageSection");
+let zoomAnimationActive = false
 
-ferrariImage.forEach((image) => {
-  image.addEventListener("mouseover", function () {
+imagesCont.forEach((imageCont) => {
+  let image = imageCont.firstElementChild
+  imageCont.addEventListener("mouseover", function () {
     zoomIn(image);
   });
-  image.addEventListener("mouseout", function () {
+  imageCont.addEventListener("mouseout", function () {
     zoomOut(image);
   });
 });

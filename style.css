@@ -107,24 +107,32 @@ nav h1 {
   -webkit-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
   -moz-box-shadow: -200px 0px 51px 300px rgba(0,0,0,0.76);
 }
-.secondSection div{
+.imageCard{
   height: 700px;
+  cursor: pointer;
 }
 .imageCont{
   width: 0;
   background-color: grey;
+  height: 100%;
 }
 .ferrariImageSection{
   opacity: 0;
 }
+.iamgeTextCont{
+  opacity: 0;
+}
+.imageCardH1{
+  font-size: 50px;
+}
 @media screen and (min-width: 768px) and (max-width: 1020px) {
-  .secondSection div{
+  .imageCard{
     height: 600px;
   }
 }
 
 @media screen and (min-width: 706px) and (max-width: 767px) {
-  .secondSection div {
+  .imageCard{
     height: 700px;
   }
 }
@@ -150,7 +158,7 @@ nav h1 {
 }
 
 @media screen and (min-width: 430px) and (max-width: 530px) {
-  .secondSection div {
+  .imageCard {
     height: 600px;
   }
   .ferrariLogo h1{
@@ -180,7 +188,7 @@ nav h1 {
 }
 
 @media screen and (max-width: 360px) {
-  .secondSection div {
+  .imageCard {
     height: 300px;
   }
   .ferrariLogo h1{
