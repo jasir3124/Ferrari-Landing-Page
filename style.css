@@ -125,6 +125,13 @@ nav h1 {
 .imageCardH1{
   font-size: 50px;
 }
+.carousel-control-prev{
+  left: -50px !important;
+}
+.carousel-control-next{
+  width: fit-content;
+  right: 20px !important;
+}
 @media screen and (min-width: 768px) and (max-width: 1020px) {
   .imageCard{
     height: 600px;
